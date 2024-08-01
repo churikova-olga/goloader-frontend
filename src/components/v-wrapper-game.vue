@@ -218,7 +218,7 @@ export default {
               , 2000)
         }
         else{
-          await axios.post(`api/review/create`, data, config)
+          await axios.post(`${process.env.VUE_APP_SERVER_URL}/review/create`, data, config)
               .then(response => {
                 setTimeout(()=> {
                       this.isLoading = "success";

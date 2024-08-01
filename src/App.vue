@@ -46,7 +46,7 @@ export default {
       const type = parse[0];
       const file = parse[1];
 
-      return axios(`api/game/uploads/${file}?type=${type}`, {
+      return axios(`${process.env.VUE_APP_SERVER_URL}/game/uploads/${file}?type=${type}`, {
         method: "GET",
         responseType: 'arraybuffer',
       })

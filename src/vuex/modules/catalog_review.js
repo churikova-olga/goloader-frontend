@@ -8,7 +8,7 @@ export default {
     actions:{
         GET_REVIEWS_FROM_API({commit}, data){
 
-            return axios.get(`api/review/${data.id}`, {
+            return axios.get(`${process.env.VUE_APP_SERVER_URL}/review/${data.id}`, {
                 params: data
             })
                 .then((review )=>{

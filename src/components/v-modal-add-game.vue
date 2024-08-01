@@ -493,7 +493,7 @@ export default {
               , 2000)
         }
         else{
-          await axios.post(`api/game/create`, data, config)
+          await axios.post(`${process.env.VUE_APP_SERVER_URL}/game/create`, data, config)
               .then(response => {
                 setTimeout(()=> {
                       this.isLoadingModal = false;

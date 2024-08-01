@@ -9,7 +9,7 @@ export default {
     actions:{
         GET_GAMES_FROM_API({commit}, data){
 
-            return axios.get(`api/game`, {
+            return axios.get(`${process.env.VUE_APP_SERVER_URL}/game`, {
                 params: data
             })
                 .then((game )=>{
@@ -22,7 +22,7 @@ export default {
                 })
         },
         GET_GAME_BY_ID({commit}, id){
-            return axios(`http://localhost:3000/api/game/${id}`, {
+            return axios(`${process.env.VUE_APP_SERVER_URL}/game/${id}`, {
                 method: "GET",
             })
                 .then((response)=>{
