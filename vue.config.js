@@ -11,6 +11,9 @@ module.exports = defineConfig({
         changeOrigin: true,
         secure: false
       }
+    },
+    server: {
+      type: 'https',
     }
   }
   // proxy: {
