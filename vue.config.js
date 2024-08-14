@@ -12,9 +12,6 @@ module.exports = defineConfig({
         secure: false
       }
     },
-    server: {
-      type: 'https',
-    }
   }
   // proxy: {
   //   '/api': {
